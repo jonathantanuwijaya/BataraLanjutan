@@ -25,37 +25,7 @@ class MyApp extends StatelessWidget {
             builder: (context, state) {
 
               if (state is AllPokemonLoaded) {
-                // var dd = state.pokemon!.types
-                //     .map(
-                //         (e) => e.type.name)
-                //     .toList();
-                // print('LIST OF ABILITY = $dd');
-                // Future.wait<void>(
-                //     [context.read<AllpokemonCubit>().getAllPokemon()]);
                 return PokemonList();
-                // return Scaffold(
-                //     body: Center(
-                //         child: Container(
-                //           child: Text(dd.toString()),
-                //   // child: ListView.builder(
-                //   //   itemCount: 8,
-                //   //   itemBuilder: (BuildContext context, int index) {
-                //   //     return Container(child: Text(state.pokemon!..toString()));
-                //   //   },
-                //   // ),
-                //   // child: ListView(
-                //   //   scrollDirection: Axis.vertical,
-                //   //   children: [
-                //   //     Column(
-                //   //         children: (state.pokemon!.types.length > 0)
-                //   //             ? state.pokemon!.abilities
-                //   //                 .map(
-                //   //                     (e) => Container(child: Text(e.ability.name)))
-                //   //                 .toList()
-                //   //             : Container(child: Text('Hello World')) as List<Widget>)
-                //   //   ],
-                //   // ),
-                // )));
               } else {
                 return Scaffold(
                     body: Center(child: CircularProgressIndicator()));
